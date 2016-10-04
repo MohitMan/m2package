@@ -1,0 +1,58 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Check google coordinate",
+        "description": "",
+        "id": "this-is-a-sample-google-coordinate-bdd-implementation;check-google-coordinate",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 45617925207,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "URL details for google",
+            "match": {
+              "location": "M2class.url_details_for_google()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 932364143,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I search anything",
+            "match": {
+              "location": "M2class.i_search_anything()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2904995986,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should see page coordinate",
+            "match": {
+              "location": "M2class.i_should_see_page_coordinate()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "This is a sample google coordinate BDD implementation",
+    "description": "",
+    "id": "this-is-a-sample-google-coordinate-bdd-implementation",
+    "keyword": "Feature",
+    "uri": "m2feature.feature"
+  }
+]
