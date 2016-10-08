@@ -1,6 +1,5 @@
 package personal.m2project.m2package;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -16,16 +15,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class M2class {
-	Properties properties = new Properties();
-	FileInputStream fileInput = null;
-	
+public class M2class extends CommonMethods
+{
+	Properties property;
 	@Before
 	public void initial_load() throws IOException
 	{
 		
-		fileInput = new FileInputStream("EnvironmentVariables.properties");
-		properties.load(fileInput);
+		property = property_initiate();
 	}
 	
 	WebDriver driver;
@@ -36,7 +33,7 @@ public class M2class {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(properties.getProperty("Personal.URL"));		
+		driver.get(property.getProperty("Personal.URL"));		
 	}
 
 	@When("^I search anything$")
@@ -54,7 +51,7 @@ public class M2class {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println(driver.findElement(By.id("lst-ib")).getLocation());
 		System.out.println(driver.findElement(By.id("sfdiv")).getLocation());
-		System.out.println(properties.getProperty("personal.username"));
+		System.out.println(property.getProperty("personal.username"));
 		System.out.println(properties.getProperty("personal.password"));
 		System.out.println("Success dude");
 		driver.quit();
