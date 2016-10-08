@@ -6,11 +6,11 @@
         "before": [
           {
             "result": {
-              "duration": 754119,
+              "duration": 837548429,
               "status": "passed"
             },
             "match": {
-              "location": "M2class.initial_load()"
+              "location": "M2class.initial_load(Scenario)"
             }
           }
         ],
@@ -23,7 +23,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20380220239,
+              "duration": 13201186246,
               "status": "passed"
             },
             "line": 4,
@@ -35,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 858170816,
+              "duration": 962690204,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 2386740212,
+              "duration": 2665721186,
               "status": "passed"
             },
             "line": 6,

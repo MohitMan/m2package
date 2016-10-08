@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,19 +18,23 @@ import cucumber.api.java.en.When;
 
 public class M2class extends CommonMethods
 {
+	  String scenarionamesend;
 	Properties property;
+	
+	
+	
 	@Before
-	public void initial_load() throws IOException
+	public void initial_load(Scenario scenarioname) throws IOException
 	{
 		
 		property = property_initiate();
+		excel_initiate(scenarioname.getName());
 	}
 	
 	WebDriver driver;
 	@Given("^URL details for google$")
 	public void url_details_for_google() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		//System.setProperty("webdriver.chrome.driver", "C:/Users/m.manchanda/Desktop/Mohit/Selenium/chromedriver_win32/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -43,7 +48,8 @@ public class M2class extends CommonMethods
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 				
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("lst-ib")));
-		driver.findElement(By.id("lst-ib")).sendKeys("Hi");
+		System.out.println(excel_read("Password"));
+		driver.findElement(By.id("lst-ib")).sendKeys(excel_read("Password"));
 	}
 
 	@Then("^I should see page coordinate$")
@@ -53,7 +59,6 @@ public class M2class extends CommonMethods
 		System.out.println(driver.findElement(By.id("sfdiv")).getLocation());
 		System.out.println(property.getProperty("personal.username"));
 		System.out.println(properties.getProperty("personal.password"));
-		System.out.println("Success dude");
 		driver.quit();
 	}
 		// TODO Auto-generated method stub
