@@ -47,7 +47,14 @@ public class M2class extends CommonMethods
 	@Given("^URL details for google$")
 	public void url_details_for_google() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		driver.get(property.getProperty("Personal.URL"));		
+		if(System.getenv("personal.URL") == null)
+		{
+		driver.get(property.getProperty("personal.URL"));
+		}
+		else
+		{
+		driver.get(System.getenv("personal.URL"));
+		}
 	}
 
 	@When("^I search anything$")
