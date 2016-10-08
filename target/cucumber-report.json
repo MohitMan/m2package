@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 837548429,
+              "duration": 8802006703,
               "status": "passed"
             },
             "match": {
@@ -18,12 +18,23 @@
         "name": "Check google coordinate",
         "description": "",
         "id": "this-is-a-sample-google-coordinate-bdd-implementation;check-google-coordinate",
+        "after": [
+          {
+            "result": {
+              "duration": 2514689964,
+              "status": "passed"
+            },
+            "match": {
+              "location": "M2class.embedScreenshot(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13201186246,
+              "duration": 9077468591,
               "status": "passed"
             },
             "line": 4,
@@ -35,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 962690204,
+              "duration": 836914558,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 2665721186,
+              "duration": 167134842,
               "status": "passed"
             },
             "line": 6,

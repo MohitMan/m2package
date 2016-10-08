@@ -3,6 +3,7 @@ package personal.m2project.m2package;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -10,8 +11,15 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class CommonMethods {
+	//---------------------Web drivers variables------------------------------------------
+	WebDriver driver;
+	
 	//-----------------------Properties file variables-------------------------------------
 	Properties properties;
 	FileInputStream fileInput = null;
@@ -30,7 +38,36 @@ public class CommonMethods {
 	
 	//******************************--------Methods------------****************************************
 	
+	//-----------------------Properties file method----------------------------------------
+		Properties property_initiate() throws IOException
+		{	
+			fileInput = new FileInputStream("EnvironmentVariables.properties");
+			properties = new Properties();
+			properties.load(fileInput);
+			return properties;
+		}
 	
+	//-------------------------- Different drivers----------------------------------
+	protected WebDriver driver_initiate()
+	{
+		
+			switch(properties.getProperty("personal.driver"))
+			{
+			case "Chrome" :
+				driver = new ChromeDriver();
+			break;
+			case "InternetExlorer" :
+				driver = new InternetExplorerDriver();
+			break;
+			case "Firefox" : 
+				driver = new FirefoxDriver();
+			break;
+			}
+		//
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().window().maximize();
+		return driver;
+	}
 	
 	//----------------------Excel Methods----------------------------------------------------
 	void excel_initiate(String scenarioname) throws IOException
@@ -73,12 +110,5 @@ public class CommonMethods {
 		
 	}
 	
-	//-----------------------Properties file method----------------------------------------
-	Properties property_initiate() throws IOException
-	{	
-		fileInput = new FileInputStream("EnvironmentVariables.properties");
-		properties = new Properties();
-		properties.load(fileInput);
-		return properties;
-	}
+	
 }
