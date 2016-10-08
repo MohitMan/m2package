@@ -3,6 +3,17 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 1870078,
+              "status": "passed"
+            },
+            "match": {
+              "location": "M2class.initial_load()"
+            }
+          }
+        ],
         "line": 3,
         "name": "Check google coordinate",
         "description": "",
@@ -12,7 +23,7 @@
         "steps": [
           {
             "result": {
-              "duration": 45617925207,
+              "duration": 18426904474,
               "status": "passed"
             },
             "line": 4,
@@ -24,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 932364143,
+              "duration": 397544053,
               "status": "passed"
             },
             "line": 5,
@@ -36,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 2904995986,
+              "duration": 2719925410,
               "status": "passed"
             },
             "line": 6,

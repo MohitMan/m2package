@@ -6,6 +6,10 @@ formatter.feature({
   "id": "this-is-a-sample-google-coordinate-bdd-implementation",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 1870078,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 3,
   "name": "Check google coordinate",
@@ -33,21 +37,21 @@ formatter.match({
   "location": "M2class.url_details_for_google()"
 });
 formatter.result({
-  "duration": 45617925207,
+  "duration": 18426904474,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_search_anything()"
 });
 formatter.result({
-  "duration": 932364143,
+  "duration": 397544053,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_should_see_page_coordinate()"
 });
 formatter.result({
-  "duration": 2904995986,
+  "duration": 2719925410,
   "status": "passed"
 });
 });
