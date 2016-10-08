@@ -51,17 +51,17 @@ public class CommonMethods {
 	protected WebDriver driver_initiate()
 	{
 		
-			switch(properties.getProperty("personal.driver"))
+			if(properties.getProperty("personal.driver").equalsIgnoreCase("Chrome"))
 			{
-			case "Chrome" :
 				driver = new ChromeDriver();
-			break;
-			case "InternetExlorer" :
+			}
+			if(properties.getProperty("personal.driver").equalsIgnoreCase("InternetExlorer"))
+			{
 				driver = new InternetExplorerDriver();
-			break;
-			case "Firefox" : 
+			}
+			if(properties.getProperty("personal.driver").equalsIgnoreCase("Firefox"))
+			{ 
 				driver = new FirefoxDriver();
-			break;
 			}
 		//
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

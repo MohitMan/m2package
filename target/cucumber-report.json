@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 8802006703,
+              "duration": 9689459805,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 2514689964,
+              "duration": 2206492356,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9077468591,
+              "duration": 10309500736,
               "status": "passed"
             },
             "line": 4,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 836914558,
+              "duration": 888136436,
               "status": "passed"
             },
             "line": 5,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 167134842,
+              "duration": 299496517,
               "status": "passed"
             },
             "line": 6,
