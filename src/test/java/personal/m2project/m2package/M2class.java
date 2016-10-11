@@ -74,7 +74,9 @@ public class M2class extends CommonMethods
 		System.out.println(driver.findElement(By.id("lst-ib")).getLocation());
 		System.out.println(driver.findElement(By.id("sfdiv")).getLocation());
 		System.out.println(property.getProperty("personal.username"));
-		System.out.println(properties.getProperty("personal.password"));		
+		System.out.println(properties.getProperty("personal.password"));
+		System.out.println(System.getenv("Gender"));
+		System.out.println(System.getenv("Fruit"));
 	}
 		// TODO Auto-generated method stub
 		

@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 9083676047,
+  "duration": 46487558123,
   "status": "passed"
 });
 formatter.scenario({
@@ -43,29 +43,29 @@ formatter.match({
   "location": "M2class.url_details_for_google()"
 });
 formatter.result({
-  "duration": 9048308959,
+  "duration": 18334649412,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_search_anything()"
 });
 formatter.result({
-  "duration": 844309857,
+  "duration": 2271945214,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_should_see_page_coordinate()"
 });
 formatter.result({
-  "duration": 191047719,
+  "duration": 317554839,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2351041038,
+  "duration": 7490471076,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5743374687,
+  "duration": 9194065201,
   "status": "passed"
 });
 formatter.scenario({
@@ -101,25 +101,25 @@ formatter.match({
   "location": "M2class.url_details_for_google()"
 });
 formatter.result({
-  "duration": 8989055246,
+  "duration": 30044884051,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_search_anything()"
 });
 formatter.result({
-  "duration": 763248818,
+  "duration": 856687749,
   "status": "passed"
 });
 formatter.match({
   "location": "M2class.i_should_see_page_coordinate()"
 });
 formatter.result({
-  "duration": 196762840,
+  "duration": 177502539,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1668785534,
+  "duration": 2130541069,
   "status": "passed"
 });
 });
