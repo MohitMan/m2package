@@ -3,6 +3,7 @@ package personal.m2project.m2package;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -27,7 +28,7 @@ public class M2class extends CommonMethods
 	@Before
 	public void initial_load(Scenario scenarioname) throws IOException
 	{
-		
+		DOMConfigurator.configure("log4j.xml");
 		property = property_initiate();
 		excel_initiate(scenarioname.getName());
 		driver = driver_initiate();
